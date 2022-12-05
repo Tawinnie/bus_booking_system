@@ -16,7 +16,7 @@ class Booking extends db_connection{
 
     function display_booking($customer_id){
         $sql = "SELECT appointment.*, categories.cat_name AS category, services.service_name AS service, 
-        services.service_price FROM `appointment` JOIN categories JOIN services WHERE appointment.customer_id = '$customer_id' 
+        services.service_price FROM `appointment` JOIN `categories` JOIN `services` WHERE appointment.customer_id = '$customer_id' 
         AND services.service_id = appointment.service_name AND appointment.cat_name = categories.cat_id;";
         return $this->db_fetch_all($sql);
     }
@@ -25,7 +25,7 @@ class Booking extends db_connection{
     //function to update a booking when a user clicks on update apppintment
     function update_booking($app_id,$customer_id,$service_name,$cat_name, $app_date, $app_time){
         $sql = "UPDATE `appointment` SET `service_name`='$service_name',`cat_name`='$cat_name',
-        `app_date`='$app_date', app_time = '$app_time' WHERE `app_id`='$app_id' AND `customer_id`='$customer_id'";
+        `app_date`='$app_date', `app_time` = '$app_time' WHERE `app_id`='$app_id' AND `customer_id`='$customer_id'";
         return $this->db_query($sql);
     }
     
