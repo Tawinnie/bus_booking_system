@@ -1,28 +1,27 @@
 <?php
-//connect to the user account class
-include("../classes/customer_class.php");
 
-//sanitize data
+require("../classes/customer_class.php");
 
-function getnewcustomer($fullname,$contact,$city,$password,$user_role)
-{
-    $newcustomer= new Customer();
-    $newcus = $newcustomer->getcustomersdata($fullname,$contact,$city,$password,$user_role);
-    return $newcus;
+function insertCustomer_ctr($name,$email,$password,$contact,$city,$userRole){
+  $add_customer= new CustomerClass();
+  return $add_customer->insertCustomer_cls($name,$email,$password,$contact,$city,$userRole);
+}
 
+
+function returnCustomer_ctr($email,$password){
+  $add_customer= new CustomerClass();
+  return $add_customer->returnCustomer_cls($email,$password);
 }
-    
-function verifyemail($fullname,$email,$contact,$country,$city,$password)
-{
-    $verify = new Customer();
-    $verifymail= $verify->Uniquemail($fullname,$email,$contact,$country,$city,$password);
-    return $verifymail;
+
+function returnCustomerid_ctr($id){
+  $add_customer= new CustomerClass();
+  return $add_customer->returnCustomerid_cls($id);
 }
-//function for login
-function newlogin($phone,$password)
-{
-    $newlog =new Customer();
-    $login = $newlog->logcustomer($phone,$password);
-    return($login);
+
+function get_user_appointment_ctr($app_id){
+  $insert_app= new CustomerClass();
+
+  return $insert_app->get_user_appointment_cls($app_id);
 }
+
 ?>

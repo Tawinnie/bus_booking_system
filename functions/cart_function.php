@@ -1,8 +1,5 @@
-
-<?php
-    // require('../controllers/cart_controller.php');
-
-function get_ip_address() {  
+<?php  
+    function getIPAddress() {  
     //whether ip is from the share internet  
      if(!empty($_SERVER['HTTP_CLIENT_IP'])) {  
                 $ip = $_SERVER['HTTP_CLIENT_IP'];  
@@ -18,4 +15,4 @@ function get_ip_address() {
      return $ip;  
 }  
 
-?>
+?> 

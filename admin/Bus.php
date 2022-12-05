@@ -17,44 +17,46 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
-              <h2 class="text-uppercase text-center mb-5">Create Your Account</h2>
+              <h2 class="text-uppercase text-center mb-5">Add a vehicle</h2>
 
-              <form action="../actions/process_registration.php" method="POST">
+              <form action="../actions/add_bus.php" method="POST">
 
                 <div class="form-outline mb-4">
-                  <input type="text" name="customer_name" id="fullname" class="form-control form-control-lg" />
-                  <label class="form-label" for="fullname">Your Full Name</label>
+                  <input type="text" name="bus_name" id="name" class="form-control form-control-lg" />
+                  <label class="form-label" for="fullname">Vehicle Name</label>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="text" name="customer_email" id="email" class="form-control form-control-lg" />
-                  <label class="form-label" for="fullname">Your Email Address</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="text" name="customer_city" id="city" class="form-control form-control-lg" />
-                  <label class="form-label" for="city">Your City</label>
+                  <input type="text" name="route" id="route" class="form-control form-control-lg" />
+                  <label class="form-label" for="contact" required>Route</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="text" name="customer_contact" id="country" class="form-control form-control-lg" />
-                  <label class="form-label" for="contact" required>Your Phone Number</label>
+                  <input type="text" name="time" id="depart" class="form-control form-control-lg" />
+                  <label class="form-label" for="contact" required>Departure Time</label>
                 </div>
-
 
                 <div class="form-outline mb-4">
-                  <input type="password" name="customer_pass" id="pass" class="form-control form-control-lg" />
-                  <label class="form-label" for="pass" required>Password</label>
+                  <input type="text" name="seats" id="city" class="form-control form-control-lg" />
+                  <label class="form-label" for="city">Number of seats</label>
                 </div>
 
+            
+                <div class="form-outline mb-4">
+                  <input type="text" name="price" id="price" class="form-control form-control-lg" />
+                  <label class="form-label" for="contact" required>Price Per Trip</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" name="luggage" id="luggagemax" class="form-control form-control-lg" />
+                  <label class="form-label" for="contact" required>Maximum Luggage</label>
+                </div>
 
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
-                    class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    class="btn btn-danger btn-block btn-lg gradient-custom-4 text-body">Add Bus</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="login.php"
-                    class="fw-bold text-body"><u>Sign in here</u></a></p>
-
+               
               </form>
 
             </div>

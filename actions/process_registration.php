@@ -3,18 +3,18 @@
 include("../controllers/customer_controller.php");
 
 if (isset ($_POST['submit'])) {
-    $fullname = $_POST['customer_name'];
+    $name = $_POST['customer_name'];
     $email = $_POST['customer_email'];
-    $city = $_POST['customer_city'];
-    $contact = $_POST['customer_contact'];
     $password = $_POST['customer_pass'];
+    $contact = $_POST['customer_contact'];
+    $city = $_POST['customer_city'];
     $user_role=0;
    
 // hashing the password before it is stored in the database
 // $password = crypt($password);
 
- $hashed_password = base64_encode($password);
- $result = getnewcustomer($fullname,$contact,$city,$hashed_password,$user_role);
+ $hash_password = base64_encode($password);
+ $result =  insertCustomer_ctr($name,$email,$hash_password,$contact,$city,$user_role);
  if ($result) {
     //echo "Registration successful!";
     header("Location: ../view/login.php");

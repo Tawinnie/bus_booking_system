@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,35 +67,7 @@
         </div>
     </div>
    
-    <!-- Topbar Start -->
-    <!-- <div class="container-fluid bg-light p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Topbar End -->
-
+  
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -108,25 +84,12 @@
                 <a href="index.php" class="nav-item nav-link active">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="service.php" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="booking.php" class="dropdown-item">Booking</a>
-                        <a href="team.php" class="dropdown-item">Technicians</a>
-                        <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <a href="404.php" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.php" class="nav-item nav-link">Contact Us</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="view/register.php" class="dropdown-item">Register</a>
-                        <a href="view/login.php" class="dropdown-item">Login</a>
-                    </div>
+                <a href="buses.php" class="nav-item nav-link">Buses</a>
 
-            </div>
-            <a href="booking.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Book A Bus<i class="fa fa-arrow-right ms-3"></i></a>
+                
+                <a href="contact.php" class="nav-item nav-link">Contact Us</a>
+                    <a href="view/login.php" class="nav-item nav-link">Login</a> 
+            <a href="view/booking.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Book A Bus<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
 
     </nav>
@@ -272,7 +235,7 @@
                                     <span class="fw-bold text-secondary">03</span>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>Certified Cars</h6>
+                                    <h6>Lisenced Vehicles</h6>
                                     <span>All our vehicles are licensed and safe to move on the road</span>
                                 </div>
                             </div>
@@ -292,23 +255,23 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                     <i class="fa fa-check fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">5</h2>
                     <p class="text-white mb-0">Years Experience</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                     <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                    <p class="text-white mb-0">Expert Technicians</p>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">10</h2>
+                    <p class="text-white mb-0">Expert Drivers</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                    <p class="text-white mb-0">Satisfied Clients</p>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">1500</h2>
+                    <p class="text-white mb-0">Satisfied Customers</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fa fa-car fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
-                    <p class="text-white mb-0">Complete Projects</p>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">15</h2>
+                    <p class="text-white mb-0">Licensed Vehicles</p>
                 </div>
             </div>
         </div>
@@ -355,11 +318,11 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <h3 class="mb-3">Quality Services you will not find any where else</h3>
+                                    <p class="mb-4">We are devoted to giving you a pleasurable experience through our quality services. Try us today and you will not regret. If you find us to be your perfect match, please recommend our services to your friends and family</p>
                                     <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Expert Drivers</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Licensed Vehicles</p>
                                     <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a> -->
                                 </div>
                             </div>
@@ -373,13 +336,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <h3 class="mb-3">Quality Services you will not find any where else</h3>
+                                    <p class="mb-4">We are devoted to giving you a pleasurable experience through our quality services. Try us today and you will not regret. If you find us to be your perfect match, please recommend our services to your friends and family</p>
                                     <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Expert Drivers</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Licensed Vehicles</p>
                                     <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a> -->
                                 </div>
+                            </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="tab-pane-3">
@@ -389,15 +353,15 @@
                                         <img class="position-absolute img-fluid w-100 h-100" src="img/service-3.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <div class="col-md-6">
+                                    <h3 class="mb-3">Quality Services you will not find any where else</h3>
+                                    <p class="mb-4">We are devoted to giving you a pleasurable experience through our quality services. Try us today and you will not regret. If you find us to be your perfect match, please recommend our services to your friends and family</p>
                                     <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Expert Drivers</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Licensed Vehicles</p>
                                     <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a> -->
                                 </div>
+                            </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="tab-pane-4">
@@ -409,13 +373,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <h3 class="mb-3">Quality Services you will not find any where else</h3>
+                                    <p class="mb-4">We are devoted to giving you a pleasurable experience through our quality services. Try us today and you will not regret. If you find us to be your perfect match, please recommend our services to your friends and family</p>
                                     <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Expert Drivers</p>
+                                    <p><i class="fa fa-check text-success me-3"></i>Licensed Vehicles</p>
                                     <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a> -->
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -426,57 +391,7 @@
     <!-- Service End -->
 
 
-    <!-- Booking Start -->
-    <div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-6 py-5">
-                    <div class="py-5">
-                        <h1 class="text-white mb-4">Certified and Award Winning Driver</h1>
-                        <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
-                        <h1 class="text-white mb-4">Book For A Bus</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Phonenumber" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Book a Bus</option>
-                                        <option value="2">Private Hire</option>
-                                        <option value="3">Package Delivery</option></option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control border-0 datetimepicker-input"
-                                            placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Request"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-secondary w-100 py-3" type="submit">Book Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Booking End -->
-
+   
 
     <!-- Team Start -->
     <div class="container-xxl py-5">
@@ -497,8 +412,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Chipiriro  Khoza</h5>
+                            <small>Chief Driver</small>
                         </div>
                     </div>
                 </div>
@@ -513,8 +428,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Wina Mwalala</h5>
+                            <small>Zomba Driver</small>
                         </div>
                     </div>
                 </div>
@@ -529,8 +444,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Winnie Chaposa</h5>
+                            <small>Blantyre Driver</small>
                         </div>
                     </div>
                 </div>
@@ -545,8 +460,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Madalitso Andi</h5>
+                            <small>Lilongwe Driver</small>
                         </div>
                     </div>
                 </div>
@@ -566,34 +481,34 @@
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Becca Vumilia</h5>
+                    <p>Business Woman</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">Business has been easy with 99 Buses, try them todya and your sales will be boosted up.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Rachel Nyambalo</h5>
+                    <p>Accountant</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">My workplace is 234km away from my home but i still get to work right on time with 99 Buses .</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Gloria Nyongolo</h5>
+                    <p>Business Woman</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">I take pride in 99 Buses because they help go to the market far form my city and still be able to come back on time.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Bright Nellio</h5>
+                    <p>Student</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">I would have missed my flights if not for 99 Buses, the option to travel early morning with 99 Buses helped me get to the airpot on time.</p>
                     </div>
                 </div>
             </div>
@@ -608,9 +523,9 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Zomba, Matawale</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0993250666</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>tawina.chaposa@ashesi.edu.gh</p>
                     <!-- <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -627,11 +542,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Diagnostic Test</a>
-                    <a class="btn btn-link" href="">Engine Servicing</a>
-                    <a class="btn btn-link" href="">Tires Replacement</a>
-                    <a class="btn btn-link" href="">Oil Changing</a>
-                    <a class="btn btn-link" href="">Vacuam Cleaning</a>
+                    <a class="btn btn-link" href="">Relocation</a>
+                    <a class="btn btn-link" href="">Transportation</a>
+                    <a class="btn btn-link" href="">Delivery</a>
+                    <a class="btn btn-link" href="">Hiring</a>
+                    <!-- <a class="btn btn-link" href=""></a> -->
                 </div>
                 <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
@@ -647,7 +562,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">99 Buses</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>

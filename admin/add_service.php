@@ -1,3 +1,12 @@
+  <?php
+session_start();
+//$_SESSION['product'];
+    //function for category
+  //step one create awareness
+    // require('../controllers/general_controller.php');
+   require('../functions/service_function.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,14 +17,6 @@
   </head>
   <body>
 
-  <?php
-session_start();
-//$_SESSION['product'];
-    //function for category
-  //step one create awareness
-    // require('../controllers/general_controller.php');
-   require('../functions/general_function.php');
-?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   
@@ -30,51 +31,40 @@ session_start();
 
               <h2 class="fw-bold mb-2 text-uppercase">Add the Bus Services</h2>
               <!-- <p class="text-white-50 mb-5">Please enter your brand name</p> -->
-    <form action="../actions/save_service.php" method="POST" enctype="multipart/form-data">
+    <form action="../actions/save_service.php" method="POST" >
         <div>
-         <label for="pcat">Category:</label><br>
-                <select name="pcat" id="mycat">
+         <label for="service_cat"> Service Category:</label><br>
+                <select name="service_cat" id="mycat">
                     <?php 
                         //call function to dynamically display  categories on dropdown
-                    get_all_cat_function();
+                    get_all_categories_function();
                     ?>
                 </select>
             <!-- <input type="text" id="pcat" name="product_cat"><br> -->
         </div>
 
-        <div>
-           <label for="pbrand">Brand:</label><br>
-                <select name="pbrand" id="brand">
-                    <?php 
-                    //call a function to dynamically display the brands on dropdown
-                    get_all_brands_function();
-                    ?>
-                </select>
-            <!-- <input type="text" id="pbrand" name="product_brand"> -->
-        </div>
+       
 
         <div>
-            <label for="ptitle">Service Name:</label><br>
-                <input type="text" id="ptitle" name="product_title" placeholder="Add Product Title"><br>
+            <label for="service_name">Service Name:</label><br>
+                <input type="text" id="service_name" name="service_name" placeholder="Add Service Name"><br>
         </div>
         
         <div>
-            <label for="pprice">Service Price:</label><br>
-            <input type="text" id=pprice name="product_price" placeholder="Add Product Price">
+            <label for="service_price">Service Price:</label><br>
+            <input type="text" id="service_price" name="service_price" placeholder="Add Service Price">
         </div>
 
         <div>
-            <label for="pdescr">ServiceDescription:</label><br>
-            <input type="text" id=pdescr name="product_descr" placeholder="Describe your Product"><br>
+            <label for="service_descr">Service Description:</label><br>
+            <input type="text" id="service_descr" name="service_descr" placeholder="Describe your Service"><br>
         </div>
-
-        <!-- <div>
-            <label for="image">Add Image:</label><br>
-            <input type="file" id=pimage name="product_image" placeholder="Add Product Image">
-        </div> -->
-
+        <div>
+            <label for="service_keywords">Service keywords:</label><br>
+            <input type="text" id="service_keyword" name="service_keywords" placeholder=" Service Keywords"><br>
+</div>
   
-        <button class="btn btn-outline-light btn-lg px-5" name="submit" type="submit">Save the Service</button>
+        <button class="btn btn-outline-light btn-lg px-5" name="add_service" type="submit">Save the Service</button>
 
         <!-- <input type="submit" id="submitting" name="submit" value="Save Product"> -->
 

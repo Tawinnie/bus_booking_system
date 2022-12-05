@@ -1,8 +1,8 @@
 <!-- <?php
 // require('../controllers/service_controller.php');
-include dirname(__FILE__).'/../controllers/service_controller.php';
+include dirname(__FILE__).'/../controllers/bus_controller.php';
 
-$service =  searchservice($_GET['search']);
+$service =  searchbus_ctrl($_GET['search']);
 
 
 ?>
@@ -28,7 +28,7 @@ $service =  searchservice($_GET['search']);
 <body>
 
 
-       <form method="post" action="../actions/searchprocess.php">
+       <form method="post" action="../actions/searchbus.php">
 
         <input type="text" class="form-control mb-0" id="search" name="search" placeholder="Type here to search" style="width: 400px; margin-left: 250px">
         <button style="margin-left: -50px" class="btn btn-primary float-right" type="submit" name="searchbutton">Search</button>
@@ -44,10 +44,10 @@ $service =  searchservice($_GET['search']);
     "
     <div class='card' style='width: 18rem; display: inline-block;'>
         <div class='card-body'>
-        <img style='height: 200px; width: 200px' src='{$x['service_image']}' alt='Card image cap'>
-        <h5 style='color: black;' class='card-title'>{$x['service_name']}</h5>
-        <h6 class='card-subtitle mb-2 text-muted'>{$x['service_price']}</h6>
-        <p style='color: grey;' class='card-text'>{$x['service_desc']}</p>
+        <h5 style='color: black;' class='card-title'>{$x['bus_name']}</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>{$x['price']}</h6>
+       <h6> <p style='color: grey;' class='card-text'>{$x['route']}</p></h6>
+
 
         </div>
         

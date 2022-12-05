@@ -21,47 +21,34 @@
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">CATEGORIES</h2>            
-				<form action="../Admin/add_category.php" method="POST">
+              <h2 class="fw-bold mb-2 text-uppercase">AVAILABLE SERVICES</h2>            
+				<form action="../admin/add_service.php" method="POST">
 
 					<div class="form-outline form-white mb-4">
-                    <button class="btn btn-outline-light btn-lg px-5" name="add_category" type="submit">Add Category</button> 
+                    <button class="btn btn-outline-light btn-lg px-5" name="add_service" type="submit">Add Services</button> 
 
-						<!--<input type="text" name="brand_name" id="typeEmailX" placeholder="Name of Brand" class="form-control form-control-lg" /> -->
-						<!-- <label class="form-label" for="typeEmailX">Brand</label> -->
 					</div>
-                  <!-- editi brand button-->
-                 <!--<div class="form-outline form-white mb-4">
-
-                    <button class="btn btn-outline-light btn-lg px-5" name="edit_brand" type="submit">Edit Brand</button>
-					</div>-->
-
-
-				<!--	<div class="d-flex justify-content-center text-center mt-4 pt-1">
-						<a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
-						<a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
-						<a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
-					</div>-->
+                
 				</form>
        </div>
        <table class="table table-dark">
     <thead>
       <tr>
-        <th scope="col">Categories</th>
-        <th scope="col">Update Categories</th>
+        <th scope="col">Services</th>
+        <th scope="col">Update Services</th>
       </tr>
       <?php
         include ("../controllers/service_controller.php");
-        $data = getCAT();
+        $data = getservices();
         foreach($data as $key => $value) {
             echo '<tr>
                     <td>
-                        '. $value["cat_name"] .'        
+                        '. $value["service_name"] .'        
                     </td>
                     <td>
-                        <form action="../actions/edit_category.php" method="POST">
-                            <input type="text" name="new_cat" required>
-                            <input type="hidden" name="cat_id" value="'. $value['cat_id'] .'" required>
+                        <form action="../actions/edit_service.php" method="POST">
+                            <input type="text" name="new_service" required>
+                            <input type="hidden" name="service_id" value="'. $value['service_id'] .'" required>
                             <input type="submit" name="update_categories" value="Update">
                         </form>
                     </td>

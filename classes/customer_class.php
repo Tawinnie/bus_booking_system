@@ -1,29 +1,70 @@
 <?php
+//connect to database class
+require("../settings/db_class.php");
 
-//class
-require('../settings/db_class.php');
 
-class Customer extends db_connection{
-    function getcustomersdata($fullname,$contact,$city,$password,$user_role){
-    //function to add the user into the database
-        $sql= "INSERT INTO `customer`( `customer_name`, `customer_pass`,`customer_city`, `customer_contact`,`user_role`) 
-        VALUES ('$fullname','$password','$city','$contact',0)";
-            return $this->db_query($sql);
+class CustomerClass extends db_connection{
+
+    function insertCustomer_cls($name,$email,$password,$contact,$city,$userRole){
+       
+        $sqltwo= "INSERT INTO `customer`(`customer_name`, `customer_email`, `customer_pass`, `customer_contact`, `customer_city`,`user_role`) 
+        VALUES ('$name','$email','$password','$contact','$city','$userRole')";
+        return $this->db_query($sqltwo);
+
     }
 
-function Uniquemail($fullname,$email,$contact,$country,$city,$password){
-    $sql= "SELECT `customer_email` FROM `customer` WHERE customer_email='$email'";
-    return $this->db_query($sql);
-      }
+    function returnCustomer_cls($email,$password){
+            $sqltwo= "SELECT * FROM `customer` WHERE `customer_email` = '$email' AND `customer_pass`= '$password'";
+            return $this->db_fetch_one($sqltwo);
+    
+        }
+        function returnCustomerid_cls($id){
+            $sqltwo= "SELECT * FROM `customer` WHERE `customer_id` = '$id'";
+            return $this->db_fetch_one($sqltwo);
+    
+        }
+        
+        function get_user_appointment_cls($app_id){
+    
+            $sql = "SELECT * FROM `appointment` WHERE `customer_id`='$app_id'";
+            return $this->db_fetch_all($sql);
+        }
+    
+
+    // function check_login_details($email){
+    //     $sql= "SELECT * FROM `customer` WHERE `customer_email` =`$email`";
+    // }
+
+    //     function check_user_role($email){
+    //         $sql="SELECT `user_role` FROM `customer` WHERE `customer_email=`$email`";
+    //     }
+    //functions for apppointment/booking
+
+//     function insert_booking_class($customer_id,$service_id,$app_date,$app_status){
+//         $sql= "INSERT INTO `appointment`( `customer_id`, `service_id`, `app_date`, `app-status`) 
+//         VALUES ('$customer_id','$app_date','$app_status'";
+//         return $this->query($sql);
+//     }
+
+//     function display_booking($app_id){
+//         $sql = "SELECT  `customer_id`, `service_id`, `app_date`, `app-status` FROM `appointment` WHERE `app_id`='$app_id";
+//         return $this->query($sql);
+//     }
 
 
-    //fucntion to query the login attempt
-    function logcustomer($phone,$password) 
-    {
-    //query to select from the database
-        $querylog= "SELECT * FROM `customer` WHERE `customer_contact` = '$phone' OR `customer_pass` = '$password'";
-       //this fetches the records
-        return $this->db_fetch_one($querylog); 
-    }
-    }
+// //function to update a booking when a user clicks on cancel apppintment
+// function update_booking($app_id,$customer_id,$service_id,$app_date,$app_status){
+//     $sql = "UPDATE `appointment` SET `customer_id`='$customer_id',
+//     `service_id`='$service_id',`app_date`='$app_date',`app-status`='$app_status' WHERE `app_id`='$app_id'";
+//     return $this->query($sql);
+// }
+// //function to delete a bookin
+// function delete_booking_class($app_id){
+//     $sql = "DELETE FROM `appointment` WHERE `app_id`='$app_id";
+//     return $this->query($sql);
+// }
+
+}
+
+
 ?>

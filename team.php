@@ -141,12 +141,13 @@
     <!-- Page Header End -->
 
 
+   
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-primary text-uppercase">// Our Technicians //</h6>
-                <h1 class="mb-5">Our Expert Technicians</h1>
+                <h6 class="text-primary text-uppercase">// Our Drivers //</h6>
+                <h1 class="mb-5">Our Expert Drivers</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -160,8 +161,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Chipiriro  Khoza</h5>
+                            <small>Chief Driver</small>
                         </div>
                     </div>
                 </div>
@@ -176,8 +177,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Wina Mwalala</h5>
+                            <small>Zomba Driver</small>
                         </div>
                     </div>
                 </div>
@@ -192,8 +193,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Winnie Chaposa</h5>
+                            <small>Blantyre Driver</small>
                         </div>
                     </div>
                 </div>
@@ -208,72 +209,8 @@
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-light text-center p-4">
-                            <h5 class="fw-bold mb-0">Full Name</h5>
-                            <small>Designation</small>
+                            <h5 class="fw-bold mb-0">Madalitso Andi</h5>
+                            <small>Lilongwe Driver</small>
                         </div>
                     </div>
                 </div>
@@ -283,21 +220,22 @@
     <!-- Team End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+
+      <!-- Footer Start -->
+      <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Zomba, Matawale</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0993250666</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>tawina.chaposa@ashesi.edu.gh</p>
+                    <!-- <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Opening Hours</h4>
@@ -308,30 +246,31 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Diagnostic Test</a>
-                    <a class="btn btn-link" href="">Engine Servicing</a>
-                    <a class="btn btn-link" href="">Tires Replacement</a>
-                    <a class="btn btn-link" href="">Oil Changing</a>
-                    <a class="btn btn-link" href="">Vacuam Cleaning</a>
+                    <a class="btn btn-link" href="">Relocation</a>
+                    <a class="btn btn-link" href="">Transportation</a>
+                    <a class="btn btn-link" href="">Delivery</a>
+                    <a class="btn btn-link" href="">Hiring</a>
+                    <!-- <a class="btn btn-link" href=""></a> -->
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">99 Buses</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
