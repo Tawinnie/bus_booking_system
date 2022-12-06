@@ -12,7 +12,7 @@ $total = $_GET['total'];
 
 <head>
     <meta charset="utf-8">
-    <title>CarServ - Car Repair HTML Template</title>
+    <title>99 Buses</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -75,7 +75,7 @@ $total = $_GET['total'];
 
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>CarServ</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>99 Buses</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -109,7 +109,7 @@ $total = $_GET['total'];
                         <!-- <h1 class="text-white mb-4 align-center">Certified and Award Winning Car Repair Service Provider</h1> -->
                         <p class="text-white mb-0 align-center">Thank you for choosing us.</p>
     
-                <h1>Services</h1>
+                <!-- <h1>Services</h1> -->
                 <?php
 
                 $data= returnCustomerid_ctr($_SESSION['customer_id']);
@@ -130,7 +130,8 @@ $total = $_GET['total'];
                         <div></div>
                         <!-- <img id="img1"  width="300" height="300" style='border-radius: 8px' src="<?php echo( $item['service_image']); ?>" alt="" srcset=""> -->
                         <div>
-                           <?php echo('GHC '); echo($item['service_price']); 
+                           <?php echo('GHC ');
+                           echo($item['service_price']); 
                            $total= $total+$item['service_price'];
                            ?>
                         </div> 

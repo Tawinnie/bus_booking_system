@@ -1,10 +1,9 @@
 <?php
-session_start();
-// include('settings/core.php');
-include ('../controllers/service_controller.php');
-$data = getCAT(); 
-$services = getservices();  
-
+    require_once dirname(__FILE__) . "/../functions/service_function.php";
+    session_start();
+    if(!(isset($_SESSION["verifyrole"]))){
+        header("location: login.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -74,29 +73,29 @@ $services = getservices();
    
 
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>CarServ</h2>
+        <a href="./index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>99 Buses</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
-                <a href="service.php" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
+                <a href="/index.php" class="nav-item nav-link">Home</a>
+                <a href="/about.php" class="nav-item nav-link">About</a>
+                <a href="/service.php" class="nav-item nav-link">Services</a>
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="booking.php" class="dropdown-item active">Booking</a>
-                        <a href="team.php" class="dropdown-item">Technicians</a>
-                        <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <a href="404.php" class="dropdown-item">404 Page</a>
+                        <a href="/booking.php" class="dropdown-item active">Booking</a>
+                        <a href="/team.php" class="dropdown-item">Technicians</a>
+                        <a href="/testimonial.php" class="dropdown-item">Testimonial</a>
+                        <a href="/404.php" class="dropdown-item">404 Page</a>
                     </div>
-                </div>
-                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                </div> -->
+                <a href="/contact.php" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a> -->
         </div>
     </nav>
     <!-- Navbar End -->
@@ -109,8 +108,8 @@ $services = getservices();
             <div class="row gx-5">
                 <div class="col-lg-6 py-5">
                     <div class="py-5">
-                        <h1 class="text-white mb-4">Certified and Award Winning Car Repair Service Provider</h1>
-                        <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+					<h1 class="text-white mb-4">You can book for a service of your choice here</h1>
+                        <p class="text-white mb-0">Please put in your information in the form alongside.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -118,34 +117,29 @@ $services = getservices();
                         <h1 class="text-white mb-4">Book For A Service</h1>
                         <form method="POST" action="../actions/book.php">
                             <div class="row g-3">
-                                <div class="col-12 col-sm-6">
+                                <!-- <div class="col-12 col-sm-6">
                                     <input type="text" name="fullname" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <input type="text" name="phone" class="form-control border-0" placeholder="Your Phone NUmber" style="height: 55px;" required>
-                                </div>
+                                </div> -->
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;" name="service_cat" id ="cat_name">
-                                        <option selected>Select A Service</option>
-                                        <option value=""></option>
+									<!-- <label for="service_cat"> Select Service Category</label> -->
+                                    <select class="form-select border-0" style="height: 55px;" name="service_cat" id ="cat_name" placeholder="select a service category">
+                                         <option selected>Select Category</option>
                                         <?php
-                                        foreach($data as $key => $value){
-                                            echo ' <otion value="'.$value["cat_id"] . '">'.$value["cat_name"].'</option>';
-                                        }
+											get_all_categories_function();
+                                        
                                         ?>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;" name="service-name" id="services">
-                                        <option selected>Select Your Preffered Bus </option>
-                                        <option value=""></option>
+								<!-- <label for="service_cat"> Select Service Category</label> -->
+                                    <select class="form-select border-0" style="height: 55px;" name="service_name" id="services" placeholder="select a service">
+                                        <option selected>Select Service </option>
                                         <?php
-                                            foreach($services as $key => $value) {
-                                                echo '<option value="' .$value["service_id"] . '">'. $value["service_name"] .'</option>'; 
-                                            }
-
+                                           get_all_services_function();
                                             ?>  
-                                       
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
@@ -182,19 +176,20 @@ $services = getservices();
     <!-- Booking End -->
 
 
+    
     <!-- Call To Action Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-8 col-md-6">
-                    <h6 class="text-primary text-uppercase">// Call To Action //</h6>
+                    <h6 class="text-primary text-uppercase">// Booking //</h6>
                     <h1 class="mb-4">Have Any Pre Booking Question?</h1>
-                    <p class="mb-0">Lorem diam ea sit dolor labore. Clita et dolor erat sed est lorem sed et sit. Diam sed duo magna erat et stet clita ea magna ea sed, sit labore magna lorem tempor justo rebum dolores. Eos dolor sea erat amet et, lorem labore lorem at dolores. Stet ea ut justo et, clita et et ipsum diam.</p>
+                    <p class="mb-0">If you have any questions, issues, recommendations or anything at all, don't hesistate to call us on this number</p>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="bg-primary d-flex flex-column justify-content-center text-center h-100 p-4">
                         <h3 class="text-white mb-4"><i class="fa fa-phone-alt me-3"></i>+233276914106</h3>
-                        <a href="contact.php" class="btn btn-secondary py-3 px-5">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
+                        <a href="#" class="btn btn-secondary py-3 px-5">Give us a call on this number<i class="fa fa-arrow-up ms-3"></i></a>
                     </div>
                 </div>
             </div>
@@ -203,21 +198,16 @@ $services = getservices();
     <!-- Call To Action End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- Footer Start -->
+		<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Zomba, Matawale</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0993250666</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>tawina.chaposa@ashesi.edu.gh</p>
+                    
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Opening Hours</h4>
@@ -228,34 +218,35 @@ $services = getservices();
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Diagnostic Test</a>
-                    <a class="btn btn-link" href="">Engine Servicing</a>
-                    <a class="btn btn-link" href="">Tires Replacement</a>
-                    <a class="btn btn-link" href="">Oil Changing</a>
-                    <a class="btn btn-link" href="">Vacuam Cleaning</a>
+                    <a class="btn btn-link" href="">Relocation</a>
+                    <a class="btn btn-link" href="">Transportation</a>
+                    <a class="btn btn-link" href="">Delivery</a>
+                    <a class="btn btn-link" href="">Hiring</a>
+                    <!-- <a class="btn btn-link" href=""></a> -->
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">99 Buses</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
+                            <a href="/index.php">Home</a>
                             <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>

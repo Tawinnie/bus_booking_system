@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 // require('../controllers/service_controller.php');
 include "../controllers/service_controller.php";
 
@@ -17,7 +17,7 @@ $service =  searchservice($_GET['search']);
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
+    <!Favicon -->
     <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
