@@ -1,17 +1,14 @@
 <?php
 
-// if(!isset($_SESSION)){
-    session_start();
-//
 require '../controllers/customer_controller.php';
-// session_start();
+session_start();
 
 if(isset($_POST['login'])){
 
     $email=$_POST['customer_email']; 
     $password=$_POST['password']; 
     // Validating email
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    // if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
     $hash = base64_encode($password);
 
@@ -27,7 +24,6 @@ if(isset($_POST['login'])){
         else 
             $_SESSION["verifyrole"] = 0;
         header("Location: ../view/userlandingpage.php");
-       // echo "Logged in  successful!";
     }
     else {
             echo "Echoke";
@@ -39,6 +35,6 @@ if(isset($_POST['login'])){
         echo "Failed to Log you in";
     }
 
-}
+// }
 
 ?>

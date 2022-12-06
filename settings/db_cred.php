@@ -6,6 +6,7 @@
 // define("HOSTNAME", "root");
 // define("PASSWORD", "");
 // define("DATABASE", "bus_booking_system");
+
 // $i++;
 // $cfg["Servers"][$i]["host"] = "us-cdbr-east-06.cleardb.net"; //providehostname
 // $cfg["Servers"][$i]["user"] = "b3f9fbf1317856"; //user name for your remote server

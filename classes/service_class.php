@@ -58,9 +58,9 @@ function addservice($service_cat,$service_name,$service_price,$service_desc,$ser
 }
 
  //--UPDATE--//
- function updateservice($service_id, $service_cat,$service_name,$service_price,$service_desc,$service_image,$service_keywords){
+ function updateservice($service_id, $service_cat,$service_name,$service_price,$service_desc,$service_keywords){
      $sql = "UPDATE `services` SET `service_cat`='$service_cat',`service_name`='$service_name',`service_price`='$service_price',
-     `service_desc`='$service_desc',`service_image`='$service_image',`service_keywords`='$service_keywords' WHERE `service_id`= '$service_id'";
+     `service_desc`='$service_desc',`service_keywords`='$service_keywords' WHERE `service_id`= '$service_id'";
      //exceute sql
      return $this->db_query($sql);
 

@@ -74,7 +74,7 @@ $total = $_GET['total'];
    
 
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="/index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>99 Buses</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -82,19 +82,11 @@ $total = $_GET['total'];
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
-                <a href="service.php" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="booking.php" class="dropdown-item active">Booking</a>
-                        <a href="team.php" class="dropdown-item">Technicians</a>
-                        <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <a href="404.php" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                <a href="/index.php" class="nav-item nav-link">Home</a>
+                <a href="/about.php" class="nav-item nav-link">About</a>
+                <a href="/service.php" class="nav-item nav-link">Services</a>
+              
+                <a href="/contact.php" class="nav-item nav-link">Contact</a>
             </div>
             <a href="../view/booking.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Book More<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -128,25 +120,20 @@ $total = $_GET['total'];
                         </div>
                         
                         <div></div>
-                        <!-- <img id="img1"  width="300" height="300" style='border-radius: 8px' src="<?php echo( $item['service_image']); ?>" alt="" srcset=""> -->
                         <div>
-                           <?php echo('GHC ');
-                           echo($item['service_price']); 
-                           $total= $total+$item['service_price'];
-                           ?>
+                       
+                           
                         </div> 
 						                        
-                        <div><a href="singleservice.php?bid=<?php echo( $item['service_id']); ?>">View Service</a></div>
-                    
-                   
-
                     <?php
                 }?>
-                    <h1 class="text-white mb-4 align-center"> Total Price </h1>
-                <?php
+                    <h1 class="text-white mb-4 align-center"> Your Total Price </h1>
+
+                <?php 
 
                 echo("GHC ".$total);
-                ?>
+                
+                 ?>
                <form id="paymentForm" method='post'>
                     <div class="form-group">
 
