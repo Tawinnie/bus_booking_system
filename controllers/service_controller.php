@@ -42,9 +42,9 @@ function getservice($id){
 }
 
 //--UPDATE--//
-function updateservice($service_id, $service_cat,$service_name,$service_price,$service_desc,$service_image,$service_keywords){
+function updateservice($service_id, $service_cat,$service_name,$service_price,$service_desc,$service_keywords){
     $newdata = new AddCAT();
-    return $newdata->updateservice($service_id, $service_cat,$service_name,$service_price,$service_desc,$service_image,$service_keywords);
+    return $newdata->updateservice($service_id, $service_cat,$service_name,$service_price,$service_desc,$service_keywords);
 }
 
 //service search

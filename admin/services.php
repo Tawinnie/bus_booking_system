@@ -49,7 +49,7 @@
                         <form action="../actions/edit_service.php" method="POST">
                             <input type="text" name="new_service" required>
                             <input type="hidden" name="service_id" value="'. $value['service_id'] .'" required>
-                            <input type="submit" name="update_categories" value="Update">
+                            <input type="submit" name="update_service" value="Update">
                         </form>
                     </td>
                 </tr>';

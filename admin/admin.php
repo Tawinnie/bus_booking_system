@@ -84,11 +84,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-			<a href="index.php" class="nav-item nav-link active">Dashboard</a>
+			<a href="" class="nav-item nav-link active">Dashboard</a>
                 <a href="../index.php" class="nav-item nav-link">Home</a>
-                <a href="add_bus.php" class="nav-item nav-link">Add Buses</a>
+                <!-- <a href="../actions/add_bus.php" class="nav-item nav-link">Add Buses</a> -->
                 <a href="category.php" class="nav-item nav-link">Manage Categories</a>
-				<a href="service.php" class="nav-item nav-link">Manage Bookings</a>
+				<a href="services.php" class="nav-item nav-link">Manage Services</a>
 
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
